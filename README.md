@@ -1,9 +1,8 @@
-"""
-
 # AI2-2017
 Aplikacje internetowe II
 
 
+```
 === list1.py ===
 match_ends
  OK  got: 3 expected: 3
@@ -74,4 +73,4 @@ front_back
  OK  got: 'KitDontenut' expected: 'KitDontenut'
 >>> 
 
-"""
+```
