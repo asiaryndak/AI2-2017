@@ -1,3 +1,5 @@
+"""
+
 # AI2-2017
 Aplikacje internetowe II
 
@@ -72,3 +74,4 @@ front_back
  OK  got: 'KitDontenut' expected: 'KitDontenut'
 >>> 
 
+"""
