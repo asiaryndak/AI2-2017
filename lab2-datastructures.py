@@ -9,17 +9,42 @@ def superTictac():
     print(2*'\n  |  |  H  |  |  H  |  |  \n--+--+--H--+--+--H--+--+--',sep='\n', end='\n  |  |  H  |  |  H  |  |  ')
 
 
-superTictac()
-
-
-def fizzBuzz():
-    suma=0
-    x=0
-    while(suma<1001):
-        if(x%3 == 0 or x%5 ==0):
-            suma+=x
-            x=x+1
-        else:
-            x=x+1
+def fizzbuzz():
+    suma = 0
+    for num in range (1000):
+        if (num % 3) == 0:
+            if (suma + num) > 1001:
+                break
+            else:
+                suma += num
+        elif (num % 5) == 0:
+            if (suma + num) > 1001:
+                break
+            else:
+                suma += num
     return suma
+
+
+
+def collatz(y):
+    lista = []
+    while(y>1):
+        if(y%2 == 0 ):
+            y=y/2
+            lista.append(int(y))
+        elif(y%2 !=0):
+            y= 3*y +1
+            lista.append(int(y))
+    return lista
+    
         
+def converter():
+    temp = float(input("Podaj temperaturę w stopniach Fahrenheit'a"))
+    tempC = (temp-32)/1.8
+    print (tempC)
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a%b
+    return a
