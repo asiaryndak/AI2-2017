@@ -76,13 +76,18 @@ front_back
 
 29.03:
 gcd:
+gcd(10,25):::
 5
+gcd(14,15):::
 1
+gcd(3,9):::
 3
+gcd(1,1):::
 1
 flip_dict:
-{'CA': ['ON'], 'US': ['NY', 'CA']}
-comprehensions:
+flip_dict({CA: US, NY: US, ON: CA})):::
+{'US': ['NY', 'CA'], 'CA': ['ON']}
+comprehensions:::
 [1, 2, 3, 4]
 [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
 [0, 3, 6, 9, 2, 5, 8, 1, 4, 7, 0, 3, 6, 9]
@@ -92,7 +97,7 @@ comprehensions:
 [None, None, None]
 ['Y', 'O', 'N']
 {8, 2, 3, 5}
-comprehensions_write:
+comprehensions_write:::
 [1, 3, 5, 7]
 [True, False, True, False]
 ['sam', 'guido']
@@ -101,8 +106,24 @@ comprehensions_write:
 [('apple', 5), ('orange', 6), ('pear', 4)]
 {'pear': 4, 'orange': 6, 'apple': 5}
 is_cyclone_phrase:
+is_cyclone_phrase('adjourned')
+True
+is_cyclone_phrase(settled):::
+False
+is_cyclone_phrase(all alone at noon):::
+True
+is_cyclone_phrase(by myself at twelve pm):::
+False
+is_cyclone_phrase('acb'):::
+True
+is_cyclone_phrase(''):::
+True
 generate_pascal_row:
-gcd:
-1
+generate_pascal_row([1, 2, 1]):::
+[1, 3, 3, 1]
+generate_pascal_row([]) :::
+[1]
+generate_pascal_row([1, 4, 6, 4, 1]):::
+[1, 5, 10, 10, 5, 1]
 
 ```
