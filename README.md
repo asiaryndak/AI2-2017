@@ -73,4 +73,36 @@ front_back
  OK  got: 'KitDontenut' expected: 'KitDontenut'
 >>> 
 
+
+29.03:
+gcd:
+5
+1
+3
+1
+flip_dict:
+{'CA': ['ON'], 'US': ['NY', 'CA']}
+comprehensions:
+[1, 2, 3, 4]
+[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+[0, 3, 6, 9, 2, 5, 8, 1, 4, 7, 0, 3, 6, 9]
+['python']
+
+
+[None, None, None]
+['Y', 'O', 'N']
+{8, 2, 3, 5}
+comprehensions_write:
+[1, 3, 5, 7]
+[True, False, True, False]
+['sam', 'guido']
+['A', 'O', 'P']
+['apple', 'pear']
+[('apple', 5), ('orange', 6), ('pear', 4)]
+{'pear': 4, 'orange': 6, 'apple': 5}
+is_cyclone_phrase:
+generate_pascal_row:
+gcd:
+1
+
 ```
