@@ -142,4 +142,63 @@ is_triangle_word(slowo)
 False
 is_triangle_word(abcd)
 True
+
+
+
+
+
+
+a: 5
+b: 1
+c: X
+d: None
+a: 5
+b: 1
+c: X
+d: None
+a: 5
+b: 8
+c: X
+d: None
+a: 5
+b: 2
+c: 4
+d: None
+a: 5
+b: 0
+c: 1
+d: None
+a: 5
+b: 2
+c: 4
+d: 8
+a: 1
+b: 1
+c: 7
+d: None
+a: 5
+b: 2
+c: []
+d: 5
+a: 1
+b: 1
+c: 7
+d: None
+>>> 
+
+
+Positional: (2, 3, 5, 7)
+Keyword: {}
+Positional: (1, 1)
+Keyword: {'n': 1}
+Positional: ()
+Keyword: {}
+Positional: ()
+Keyword: {'cs': 'Computer Science', 'pd': 'Product Design'}
+Positional: (5, 8)
+Keyword: {'k': 1, 'swap': 2}
+Positional: (8, 3, 4, 5)
+Keyword: {'k': 1, 'a': 5, 'b': 'x'}
+
+
 ```
