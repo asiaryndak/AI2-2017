@@ -78,8 +78,16 @@ def triangle_words():
     return len(triangle_words)
 
 
-def polygon_collision(poly1, poly2):
-    pass  #
+def is_triangle_number(num):
+     discrim = 8 * num + 1
+     base = int(math.sqrt(discrim))
+     return base * base == discrim
+
+def is_triangle_word(word):
+     count = 0
+     for ch in word.upper().strip():
+         count += ord(ch) - ord('A') + 1
+     return is_triangle_number(count)
 
 
 print("gcd:")
@@ -130,9 +138,18 @@ print("is_triangle_number(42):::")
 print(is_triangle_number(52))
 print("is_triangle_word('slowo'):::")
 print(is_triangle_word("slowo"))
-#print("triangle_words():::")
-#print(triangle_words())
-#print("polygon_collision(poly1, poly2):::")
-#print(polygon_collision(poly1, poly2))
+
+print("is_triangle_number3")
+print(is_triangle_number(3))
+print("is_triangle_number2")
+print(is_triangle_number(2))
+print("is_triangle_number9")
+print(is_triangle_number(9))
+print("is_triangle_word(word)")
+print(is_triangle_word("word"))
+print("is_triangle_word(slowo)")
+print(is_triangle_word("slowo"))
+print("is_triangle_word(abcd)")
+print(is_triangle_word("abcd"))
 
 
