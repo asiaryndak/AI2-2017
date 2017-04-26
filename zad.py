@@ -153,3 +153,54 @@ print("is_triangle_word(abcd)")
 print(is_triangle_word("abcd"))
 
 
+def print_two(a, b):
+     print("Arguments: {0} and {1}".format(a, b))
+
+print_two(1, a=1)     # invalid -- TypeError for passing multiple values for 'a'
+print_two(b=1, a=4)   # valid
+print_two(a=4, b=1)   # valid
+#print_two(b=4,1)     # invalid -- SyntaxError for having non-keyword arg after keyword arg
+print_two(4, 1, 1)    # invalid -- TypeError for passing 3 positional args instead of 2
+print_two(4, a=1)     # invalid -- TypeError for passing multiple values for 'a'
+#print_two(a=4, 1)     # invalid -- SyntaxError for having non-keyword arg after keyword arg
+print_two(41)         # invalid -- TypeError for omitting 1 required positional arg
+print_two(4, 1)       # valid
+print_two()   
+
+
+def keyword_args(a, b=1, c='X', d=None):
+     print("a:", a)
+     print("b:", b)
+     print("c:", c)
+     print("d:", d)
+
+keyword_args(5)               # valid
+keyword_args(a=5)             # valid, same output as above
+keyword_args(5, 8)            # valid
+keyword_args(5, 2, c=4)       # valid
+keyword_args(5, 0, 1)         # valid
+keyword_args(5, 2, d=8, c=4)  # valid
+#keyword_args(5, 2, 0, 1, "")  # invalid -- TypeError for passing 5 args
+#keyword_args(c=7, 1)          # invalid -- SyntaxError for passing non-keyword arg after keyword arg
+keyword_args(c=7, a=1)        # valid
+keyword_args(5, 2, [], 5)     # valid
+#keyword_args(1, 7, e=6)       # invalid -- TypeError for passing unexpected keyword arg 'e'
+keyword_args(1, c=7)          # valid
+#keyword_args(5, 2, b=4)       # invalid -- TypeError for passing multiple values for'b'
+
+
+def variadic(*args, **kwargs):
+    print("Positional:", args)
+    print("Keyword:", kwargs)
+
+variadic(2, 3, 5, 7) # valid
+variadic(1, 1, n=1)  # valid
+#variadic(n=1, 2, 3)  # invalid -- SyntaxError for passing non-keyword arg after keyword arg
+variadic() # valid
+variadic(cs="Computer Science", pd="Product Design") # valid
+#variadic(cs="Computer Science", cs="CompSci", cs="CS") # invalid -- SyntaxError for repeating keyword arg
+variadic(5, 8, k=1, swap=2) # valid
+#variadic(*[8, 3], *[4, 5], k=1, **{'a':5, 'b':'x'}) # invalid -- SyntaxError for double *
+variadic(8, *[3, 4, 5], k=1, **{'a':5, 'b':'x'}) # valid
+#variadic(*[3, 4, 5], 8, *(4, 1), k=1, **{'a':5, 'b':'x'}) # invalid -- SyntaxError for double *
+
