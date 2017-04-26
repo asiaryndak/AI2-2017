@@ -126,4 +126,20 @@ generate_pascal_row([]) :::
 generate_pascal_row([1, 4, 6, 4, 1]):::
 [1, 5, 10, 10, 5, 1]
 
+is_triangle_number(42):::
+False
+is_triangle_word('slowo'):::
+False
+is_triangle_number3
+True
+is_triangle_number2
+False
+is_triangle_number9
+False
+is_triangle_word(word)
+False
+is_triangle_word(slowo)
+False
+is_triangle_word(abcd)
+True
 ```
