@@ -235,4 +235,21 @@ FILTER:
 ['Stanford']
 [0, 3, 5, 6, 9, 10, 12, 15, 18]
 
+
+>>> gcd(9,6)
+3
+>>> lcm(6,2)
+Traceback (most recent call last):
+  File "<pyshell#36>", line 1, in <module>
+    lcm(6,2)
+  File "C:/Users/student.INFORMATYKA/Desktop/functionalProgramming.py", line 41, in lcm
+    return functools.reduce(lambda x, y: x * y / gcd(x, y), args)
+NameError: name 'functools' is not defined
+>>> 
+=== RESTART: C:/Users/student.INFORMATYKA/Desktop/functionalProgramming.py ===
+>>> lcm(6,2)
+6.0
+>>> fact(5)
+0
+>>> 
 ```
