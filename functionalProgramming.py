@@ -1,4 +1,9 @@
-
+import random       
+import functools    
+import operator     
+import itertools    
+import collections  
+import inspect 
 
 (lambda val: val ** 2)(5)  # => 25
 (lambda x, y: x * y)(3, 8)  # => 24
