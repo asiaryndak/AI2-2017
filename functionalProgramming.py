@@ -30,3 +30,15 @@ def filtr():
     print(list(filter(lambda x: x[0] == 'S', ['Stanford', 'Cal', 'UCLA'])))
     # range(20) -> [0, 3, 5, 6, 9, 10, 12, 15, 18]
     print(list(filter(lambda n: n % 3 == 0 or n % 5 == 0, range(20))))
+
+    def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def lcm(*args):
+    return functools.reduce(lambda x, y: x * y / gcd(x, y), args)
+
+def fact(n):
+    return functools.reduce(operator.mul, range(n))
+
