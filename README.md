@@ -200,5 +200,31 @@ Keyword: {'k': 1, 'swap': 2}
 Positional: (8, 3, 4, 5)
 Keyword: {'k': 1, 'a': 5, 'b': 'x'}
 
+10.05.2017 FUNCTIONAL PROGRAMMING
+
+>>> print(function())
+[12, -2, 0]
+>>> 
+=== RESTART: C:/Users/student.INFORMATYKA/Desktop/functionalProgramming.py ===
+>>> print(function_length())
+[1, 1]
+>>> 
+=== RESTART: C:/Users/student.INFORMATYKA/Desktop/functionalProgramming.py ===
+>>> print(function_length())
+[5, 5]
+
+>>> print(function_back())
+['olleh', 'dlrow']
+
+
+>>> print(function_range())
+[(2, 4), (3, 27), (4, 256), (5, 3125)]
+>>> 
+=== RESTART: C:/Users/student.INFORMATYKA/Desktop/functionalProgramming.py ===
+>>> print(function_range())
+[(2, 4, 8), (3, 9, 27), (4, 16, 64), (5, 25, 125)]
+
+>>> 
+
 
 ```
