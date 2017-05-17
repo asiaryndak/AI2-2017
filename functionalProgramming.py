@@ -97,4 +97,16 @@ def test_itertools():
     return sum(itertools.starmap(operator.mul, zip(u, v)))   
 
 
+def transpose(m):
+    return tuple(zip(*m))
+
+def transpose_lazy(m):
+    return zip(*m)
+
+def matmul(m1, m2):
+    return tuple(map(lambda row: tuple(dot_product(row, col) for col in transpose(m2)), m1))
+
+def matmul_lazy(m1, m2):
+    return map(lambda row: (dot_product(row, col) for col in transpose(m2)), m1)
+
 
