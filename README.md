@@ -252,4 +252,41 @@ NameError: name 'functools' is not defined
 >>> fact(5)
 0
 >>> 
+
+
+17.05.2017
+
+alpha_score("ABCD")
+10
+>>> alpha_score("ABC")
+6
+
+>>> print(two_best(['HellOO', 'wORLd','whaT']))
+['wORLd', 'HellOO']
+>>> 
+
+>>> print(replacingControlFlow(1))
+Winner
+>>> print(replacingControlFlow(-1))
+Loser
+>>> print(replacingControlFlow(0))
+Tied
+
+
+>>> test_itertools()
+('X', 'K'), ('X', 'C'), ('X', 'D'), ('K', 'X'), ('K', 'C'), ('K', 'D'), ('C', 'X'), ('C', 'K'), ('C', 'D'), ('D', 'X'), ('D', 'K'), ('D', 'C'), 
+>>> 
+
+>>> dot_product([1,2,3,4],[5,6,7,])
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    dot_product([1,2,3,4],[5,6,7,])
+  File "C:/Users/asiar/Desktop/17.05- zad.py", line 104, in dot_product
+    assert len(u) == len(v)
+AssertionError
+
+
+>>> 
+
+
 ```
