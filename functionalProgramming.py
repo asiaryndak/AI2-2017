@@ -47,3 +47,54 @@ def lcm(*args):
 def fact(n):
     return functools.reduce(operator.mul, range(n))
 
+
+17.05.2017: 
+def alpha_score(upper_letters):
+    """Computers the alphanumeric sum of letters in a string.
+    Prerequisite: upper_letters is composed entirely of capital letters.
+    """
+    return sum(map(lambda l: 1 + ord(l) - ord('A'), upper_letters))
+
+alpha_score('ABC')  # => 6 = 1 ('A') + 2 ('B') + 3 ('C')
+
+def two_best(words):
+    words.sort(key=lambda word: alpha_score(filter(str.isupper, word)), reverse=True)
+    return words[:2]
+
+two_best(['hEllO', 'wOrLD', 'i', 'aM', 'PyThOn'])
+
+def printWinner():
+    return "Winner"
+
+def printLoser():
+    return "Loser"
+
+def printElse():
+    return "Tied"
+
+
+def replacingControlFlow(score):
+    return ((score == 1 ) and printWinner()) or ((score == (-1) and printLoser()) or (printElse()))
+
+
+def iterator_consumption():
+    it = iter(range(100))
+    67 in it  # => True
+    next(it)  # => 68
+    37 in it  # => False, and in searching runs the iterator to exhaustion
+    next(it)  # => raises StopIteration
+
+def test_itertools():
+    for el in itertools.permutations('XKCD', 2):
+        print(el, end=', ')
+    # ('X', 'K'), ('X', 'C'), ('X', 'D'), \
+    # ('K', 'X'), ('K', 'C'), ('K', 'D'), \
+    # ('C', 'X'), ('C', 'K'), ('C', 'D'), \
+    # ('D', 'X'), ('D', 'K'), ('D', 'C'), \
+    
+ def dot_product(u, v):
+    assert len(u) == len(v)
+    return sum(itertools.starmap(operator.mul, zip(u, v)))   
+
+
+
